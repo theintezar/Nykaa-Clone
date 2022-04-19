@@ -34,14 +34,14 @@ const Navbaar = () => {
   
     return (
     <>
-      <AppBar position="sticky" color="primary">
+      <AppBar sx={{zIndex:"999"}} color="primary" position="fixed">
         <StyledToolbar>
 
           <Typography variant="h6" sx={{display:{xs:"block", sm:"none"}}}>
                <img width={"40px"} border-radius={"50%"} src="https://image.winudf.com/v2/image1/Y29tLmZzbi5uZHNfaWNvbl8xNjQwMzAwMTQ1XzA0OQ/icon.png?w=&fakeurl=1" alt="" />
           </Typography>
 
-          <StyledToolbar sx={{width:"45%"}}>
+          <StyledToolbar sx={{width:"50%"}}>
 
           <Typography variant="h6" sx={{display:{xs:"none", sm:"block"}}}>
               <img width={"100px"} src="https://cdn.worldvectorlogo.com/logos/nykaa-1.svg" alt="" />

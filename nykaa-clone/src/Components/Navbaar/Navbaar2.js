@@ -6,11 +6,13 @@ import {AppBar, styled, Toolbar} from "@mui/material";
 
 
 
+
 const StyledToolbar = styled(Toolbar)({
     display: "flex",
     justifyContent:"space-between",
     alignItems:"center",
-    boxSizing:"border-box"
+    boxSizing:"border-box",
+    height:"30px"
   });
 
 
@@ -36,7 +38,7 @@ const Navbaar2 = () => {
             <p><img width={"70px"} src="https://www.kindpng.com/picc/m/112-1127467_logo-brand-font-product-transparent-sale-clip-art.png" alt="" /></p>
          
         </StyledToolbar>
-      </AppBar>
+       </AppBar>
     
    );
 }
