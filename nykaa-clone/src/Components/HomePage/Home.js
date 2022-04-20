@@ -12,6 +12,8 @@ export default function Home() {
         <Navbaar2/>
         <Slider/>
         <MiddleContent/>
+       
+       
     </>
   )
 }
