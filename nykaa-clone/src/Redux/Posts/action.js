@@ -17,7 +17,7 @@ const handleError = ()=>({
 
 const getData = () => (dispatch)=>{
     dispatch(handleLoading())
-    fetch("https://jsonplaceholder.typicode.com/posts")
+    fetch("http://localhost:3002/menData")
     .then((res)=>res.json())
     .then((data)=>dispatch(storeData(data)))
     .catch((err)=>dispatch(handleError()))
