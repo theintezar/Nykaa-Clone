@@ -15,4 +15,12 @@ const handleError = ()=>({
     
 })
 
-export {storeData, handleError, handleLoading}
+const getData = () => (dispatch)=>{
+    dispatch(handleLoading())
+    fetch("https://jsonplaceholder.typicode.com/posts")
+    .then((res)=>res.json())
+    .then((data)=>dispatch(storeData(data)))
+    .catch((err)=>dispatch(handleError()))
+}
+
+export {storeData, handleError, handleLoading, getData}

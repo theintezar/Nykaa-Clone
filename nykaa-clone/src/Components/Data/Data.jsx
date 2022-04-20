@@ -1,18 +1,14 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { storeData } from '../../Redux/Comments/action';
-import { handleLoading} from '../../Redux/Posts/action';
+import { getData, handleLoading} from '../../Redux/Posts/action';
 import { handleError } from '../../Redux/Posts/action';
 
 const Data = () => {
     const dispatch = useDispatch();
 
     useEffect(()=>{
-        dispatch(handleLoading())
-        fetch("https://jsonplaceholder.typicode.com/posts")
-        .then((res)=>res.json())
-        .then((data)=>dispatch(storeData(data)))
-        .catch((err)=>dispatch(handleError()))
+     dispatch(getData());
     },[])
 
     const data1 = useSelector((state)=> state.comment.data) //data access from action 
