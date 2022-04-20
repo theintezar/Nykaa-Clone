@@ -9,8 +9,8 @@ import MenProduct from "./pages/Products/MenProduct";
 function App() {
   return (
     <div>
-     {/* <Home/>
-     <Data></Data> */}
+     {/* <Home/>*/}
+     {/* <Data></Data>  */}
      <MenProduct/>
     
     </div>

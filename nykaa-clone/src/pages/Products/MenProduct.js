@@ -2,13 +2,16 @@ import React from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { getData } from '../../Redux/Posts/action';
 import { useEffect , useState} from 'react';
-import { Pagination, Typography } from '@mui/material';
+import { Pagination } from '@mui/material';
 function MenProduct() {
-     const [page, setPage] = useState(1);
-     const dispatch = useDispatch()
+  
+  const [page, setPage] = useState(1);
+  
+ let url =  `http://localhost:3002/menData?_page=${page}&_limit=5`;
+  const dispatch = useDispatch()
      useEffect(() => {
-         dispatch(getData())
-      },[]);
+         dispatch(getData(url))
+      },url);
       const data2 = useSelector((state)=> state.post.data)
       console.log(data2)
       
@@ -23,9 +26,8 @@ function MenProduct() {
     {data2.map((item)=>(
         <img src={item.image} alt="No" />
     ))}
-    <Typography>Page: {page}</Typography>
 
-    <Pagination count={Math.round(data2.length/9)} variant="outlined" page={page} onChange={handleChange} />
+    <Pagination count={data2.length-1} variant="outlined" page={page} onChange={handleChange} />
     </div>
   )
 }

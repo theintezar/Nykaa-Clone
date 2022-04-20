@@ -15,9 +15,9 @@ const handleError = ()=>({
     
 })
 
-const getData = () => (dispatch)=>{
+const getData = (url) => (dispatch)=>{
     dispatch(handleLoading())
-    fetch("http://localhost:3002/menData")
+    fetch(url)
     .then((res)=>res.json())
     .then((data)=>dispatch(storeData(data)))
     .catch((err)=>dispatch(handleError()))

@@ -7,13 +7,15 @@ import { handleError } from '../../Redux/Posts/action';
 const Data = () => {
     const dispatch = useDispatch();
 
+    let url = "http://localhost:3002/menData";
+
     useEffect(()=>{
-     dispatch(getData());
-    },[])
+     dispatch(getData(url));
+    },url)
 
     const data1 = useSelector((state)=> state.comment.data) //data access from action 
     const loading = useSelector((state)=> state.post.isLoading)
-    //console.log(data1);
+    console.log(data1);
 
     if(loading){
       return <h1>loding....</h1>
