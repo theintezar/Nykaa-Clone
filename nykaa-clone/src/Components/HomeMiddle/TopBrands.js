@@ -14,6 +14,18 @@ const DIV = styled("div")({
 
 });
 
+const DIV2 = styled("div")({
+  display:"flex",
+  justifyContent:"space-around",
+  alignItems:"center",
+  backgroundColor: "#ffffff",
+  margin:"auto",
+  width:"90%",
+  flexWrap:"wrap",
+  gap:"20px"
+
+});
+
 function TopBrands() {
   return (
     
@@ -27,6 +39,10 @@ function TopBrands() {
          </div>
        ))}
      </DIV>
+
+     <DIV2>
+       <img src="https://drive.google.com/file/d/1sg4fMCHOk7QwmNDXQ0KmieC6iCrCnviE/view?usp=sharing" alt="" />
+    </DIV2>
     </>
   )
 }

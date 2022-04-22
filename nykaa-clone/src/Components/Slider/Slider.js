@@ -1,17 +1,18 @@
 import React, {useState} from 'react'
 import './slider.css'
 import BtnSlider from './BtnSlider'
-import dataSlider from './dataSlider'
+// import dataSlider from './dataSlider'
 
-export default function Slider() {
+export default function Slider({data, num}) {
 
     const [slideIndex, setSlideIndex] = useState(1)
+    console.log("what is the valueof ",num)
 
     const nextSlide = () => {
-        if(slideIndex !== dataSlider.length){
+        if(slideIndex !== data.length){
             setSlideIndex(slideIndex + 1)
         } 
-        else if (slideIndex === dataSlider.length){
+        else if (slideIndex === data.length){
             setSlideIndex(1)
         }
     }
@@ -21,7 +22,7 @@ export default function Slider() {
             setSlideIndex(slideIndex - 1)
         }
         else if (slideIndex === 1){
-            setSlideIndex(dataSlider.length)
+            setSlideIndex(data.length)
         }
     }
 
@@ -30,12 +31,13 @@ export default function Slider() {
     }
 
     return (
-        <div className="container-slider">
-            {dataSlider.map((obj, index) => {
+        <div className="container-slider" id={num===2? "prod1": "leave"}>
+            {data.map((obj, index) => {
                 return (
                     <div
                     key={obj.id}
                     className={slideIndex === index + 1 ? "slide active-anim" : "slide"}
+                    id={num===2? "prod": "leave"}
                     >
                         <img 
                         src={obj.title} 
@@ -47,7 +49,7 @@ export default function Slider() {
             <BtnSlider moveSlide={prevSlide} direction={"prev"}/>
 
             <div className="container-dots">
-                {Array.from({length: 7}).map((item, index) => (
+                {Array.from({length: num}).map((item, index) => (
                     <div 
                     onClick={() => moveDot(index + 1)}
                     className={slideIndex === index + 1 ? "dot active" : "dot"}
