@@ -35,7 +35,7 @@ const dataSlider = [
 
   {
       id: uuidv4(),
-      title: "https://images-static.nykaa.com/uploads/7b91a16a-42dd-40b9-bc29-c3c31976c711.jpg?tr=w-2400,cm-pad_resize",
+      title: "https://images-static.nykaa.com/uploads/2b500d80-cff1-40b8-847e-7b230b379443.jpg?tr=w-2400,cm-pad_resize",
       subTitle: "Lorem"
   }
 ];

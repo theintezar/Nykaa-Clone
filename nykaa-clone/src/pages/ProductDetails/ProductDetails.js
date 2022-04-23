@@ -5,30 +5,39 @@ import {useEffect} from "react";
 import { getData } from '../../Redux/Posts/action';
 import styled from '@emotion/styled';
 import { addToCart } from '../../Redux/Cart/action';
+import Navbaar from "../../Components/Navbaar/Navbaar";
+import Navbaar2 from "../../Components/Navbaar/Navbaar2"
+
+const DIV1 = styled("div")({
+  display:"flex",
+  boxShadow: "0 5px 10px rgba(0, 0, 0, 0.2)",
+  width:"85%",
+  margin:"150px auto",
+  gap:"1px"
+ })
 
 const DIV3 = styled("div")({
-    display:"flex",
-    alignItems:"center",
-    justifyContent:"center",
-    flexDirection:"column",
-    flexBasis:"31%",
-    boxShadow: "0 10px 20px rgba(0, 0, 0, 0.2)",
-    borderRadius:"5px",
-    overflow:"hidden",
-    width:"30%",
-    
-     margin:"150px auto"
+    // display:"flex",
+    // alignItems:"center",
+    // justifyContent:"center",
+    // flexDirection:"column",
+    width:"39.5%",
+    borderRight:"2px solid grey",
+    padding:"30px",
    
   })
   const DIV4 = styled("div")({
+       padding:"30px",
+       width:"59.5%",
+   
+  })
+
+  const DIV = styled("div")({
     display:"flex",
     alignItems:"center",
     justifyContent:"space-between",
-    width:"100%",
-    "&:hover":{
-      backgroundColor: "#fc2779",
-    }
-   
+    width:"65%",
+    
   })
 
 function ProductDetails() {
@@ -48,25 +57,49 @@ function ProductDetails() {
         const data1 = useSelector((state)=> state.cart.data)
         //console.log(data1)
   return (
-   <div>
+    <>
+    <Navbaar/>
+    <Navbaar2/>
+   <DIV1>
        
         <DIV3 className='hoverStyle'>
            <p style={{color:"red",textAlign:"justify",padding:"20px", fontSize:"14px"}}> FEATURED : <span style={{color:"#85dda3"}}>{data.featured}</span></p>
-           <img width={"80%"} src={data.image} alt="No" key={data.id}/>
-            <p style={{ textAlign:'center',padding:"20px", fontWeight:"700", fontFamily:"serif"}}>{data.desc}</p>
-            <p style={{ textAlign:'center',padding:"10px", fontWeight:"700", fontFamily:"serif",display:"flex"}}>MRP: {data.mrp}</p>
-            <p style={{ textAlign:'center',padding:"10px", fontWeight:"700", fontFamily:"serif"}}>
-            <img width={"30%"} src="https://www.pngkit.com/png/detail/39-399026_4-1-2-stars-logo-4-stars.png" alt="" />
-            <p>({data.review})</p> 
-            </p>
+           <img width={"90%"} src={data.image} alt="No" key={data.id}/>
+        </DIV3>
+        <DIV4>
+            <p style={{ fontWeight:"500", fontFamily:"serif", fontSize:"30px"}}>{data.desc}</p>
+            <p>(100ml)</p>
+             <br />
+          <DIV>
+             <img width={"18%"} src="https://www.pngkit.com/png/detail/39-399026_4-1-2-stars-logo-4-stars.png" alt="" />
+             <p>4/5</p>
+             <p>{data.review} ratings & 84 reviews</p> 
+             <p>64 Q&As</p>
+          </DIV>
+          <br />
 
-            <DIV4>
-               <div style={{width:"20%"}}><img src='data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHZpZXdCb3g9IjAgMCAxNzIgMTcyIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9Im5vbnplcm8iIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBzdHJva2UtbGluZWNhcD0iYnV0dCIgc3Ryb2tlLWxpbmVqb2luPSJtaXRlciIgc3Ryb2tlLW1pdGVybGltaXQ9IjEwIiBzdHJva2UtZGFzaGFycmF5PSIiIHN0cm9rZS1kYXNob2Zmc2V0PSIwIiBmb250LWZhbWlseT0ibm9uZSIgZm9udC13ZWlnaHQ9Im5vbmUiIGZvbnQtc2l6ZT0ibm9uZSIgdGV4dC1hbmNob3I9Im5vbmUiIHN0eWxlPSJtaXgtYmxlbmQtbW9kZTogbm9ybWFsIj48cGF0aCBkPSJNMCwxNzJ2LTE3MmgxNzJ2MTcyeiIgZmlsbD0ibm9uZSI+PC9wYXRoPjxnIGZpbGw9IiNmZmZmZmYiPjxwYXRoIGQ9Ik01Ni4zMywzMC45NmMtMjEuNTI2ODcsMCAtMzkuMTMsMTcuMzg4MTMgLTM5LjEzLDM4LjgwNzVjMCw0My45MjcxOSA0OS44Mzk2OSw2Ni45MzIxOSA2Ni42NSw4MC44NGwyLjE1LDEuODI3NWwyLjE1LC0xLjgyNzVjMTYuODEwMzEsLTEzLjkwNzgxIDY2LjY1LC0zNi45MTI4MSA2Ni42NSwtODAuODRjMCwtMjEuNDE5MzcgLTE3LjYwMzEyLC0zOC44MDc1IC0zOS4xMywtMzguODA3NWMtMTEuOTU5MzcsMCAtMjIuNDk0MzcsNS41NDk2OSAtMjkuNjcsMTMuOTc1Yy03LjE3NTYyLC04LjQyNTMxIC0xNy43MTA2MiwtMTMuOTc1IC0yOS42NywtMTMuOTc1ek01Ni4zMywzNy44NGMxMS4yMzM3NSwwIDIxLjAwMjgxLDUuNjg0MDYgMjYuNzY3NSwxNC4yOTc1bDIuOTAyNSw0LjNsMi45MDI1LC00LjNjNS43NjQ2OSwtOC42MTM0NCAxNS41MzM3NSwtMTQuMjk3NSAyNi43Njc1LC0xNC4yOTc1YzE3LjgzMTU2LDAgMzIuMjUsMTQuMjU3MTkgMzIuMjUsMzEuOTI3NWMwLDM3LjQ5MDYzIC00Mi4xODAzMSw1OC41MDY4OCAtNjEuOTIsNzMuOTZjLTE5LjczOTY5LC0xNS40NTMxMiAtNjEuOTIsLTM2LjQ2OTM3IC02MS45MiwtNzMuOTZjMCwtMTcuNjcwMzEgMTQuNDA1LC0zMS45Mjc1IDMyLjI1LC0zMS45Mjc1eiI+PC9wYXRoPjwvZz48L2c+PC9zdmc+'></img> </div>
-               <div onClick={() => addCart(data)} style={{width:"80%", textAlign:"center", fontSize:"20px", fontWeight:"700", color:"white"}}>ADD TO BAG</div>
-            </DIV4>  
-           </DIV3>
+            <p style={{ fontWeight:"500", fontFamily:"serif",color:"grey"}}>
+            MRP: <strike style={{color:"grey"}}>₹3000</strike> 
+            <span style={{fontSize:"20px",color:"black"}}> ₹{data.mrp} </span>
+            <span style={{color:"#85dda3"}}>{data.off} Off</span> 
+            </p>
+           <br />
+           <p style={{width:"90%", backgroundColor:"#eceef0", padding:"10px", marginTop:"30px"}}>Shop worth INR 1200 and above and get a free Nykaa Cosmetics Nail Paint. Terms & conditions apply. Offer valid until stock lasts.</p> 
+           
+           <br />
+
+           <div onClick={() => addCart(data)} style={{width:"40%", textAlign:"center", fontSize:"20px", fontWeight:"700", color:"white", backgroundColor:"#fc2779", padding:"20px", margin:"auto", marginTop:"30px"}}>ADD TO BAG</div>
+
+           <div style={{display:"flex", width:"100%",height:"60px", justifyContent:"space-between", alignItems:"center", backgroundColor:"#eceef0", marginTop:"50px"}}>
+             <div>100% Genuine Products</div>
+             <div>Easy Return Policy</div>
+             <div>Sold by :NYKAA E RETAIL P...</div>
+           </div>
+        </DIV4>  
+           
        
-   </div>
+   </DIV1>
+   </>
   )
 }
 
