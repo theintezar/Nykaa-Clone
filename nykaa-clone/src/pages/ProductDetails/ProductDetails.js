@@ -46,7 +46,7 @@ function ProductDetails() {
             dispatch(addToCart(data))
         }
         const data1 = useSelector((state)=> state.cart.data)
-        console.log(data1)
+        //console.log(data1)
   return (
    <div>
        

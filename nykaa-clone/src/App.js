@@ -4,6 +4,7 @@ import Home from "./Components/HomePage/Home";
 import Navbaar from "./Components/Navbaar/Navbaar";
 import Navbaar2 from "./Components/Navbaar/Navbaar2";
 import MenProduct from "./pages/Products/MenProduct";
+import Cart from "./pages/Cart/Cart";
 
 import {
   BrowserRouter as Router,
@@ -22,14 +23,12 @@ function App() {
   return (
     <div>
   <Router>
-      <Navbaar/>
-      <Navbaar2/>
-
       <Routes>
+      
       <Route path="/" element={ <Home/>}/>
       <Route path="/product" element={ <MenProduct/>}/>
       <Route path="/product/:id" element={ <ProductDetails/>}/>
-      {/* <Route path="/product/:id/cart" element={ <Cart/>}/> */}
+      <Route path="/product/cart" element={ <Cart/>}/>
 
       </Routes>
 

@@ -15,17 +15,17 @@ const DIV = styled("div")({
 
 });
 
-const DIV2 = styled("div")({
-  display:"flex",
-  justifyContent:"space-around",
-  alignItems:"center",
-  backgroundColor: "#ffffff",
-  margin:"auto",
-  width:"90%",
-  flexWrap:"wrap",
-  gap:"20px"
+// const DIV2 = styled("div")({
+//   display:"flex",
+//   justifyContent:"space-around",
+//   alignItems:"center",
+//   backgroundColor: "#ffffff",
+//   margin:"auto",
+//   width:"90%",
+//   flexWrap:"wrap",
+//   gap:"20px"
 
-});
+// });
 
 function TopBrands() {
   return (
@@ -35,15 +35,15 @@ function TopBrands() {
     
      <DIV>
        {brandimg.map((items)=>(
-         <div style={{flexBasis:"48%", boxShadow: "0 15px 25px rgba(0, 0, 0, 0.3)", marginTop:"20px"}}>
+         <div  style={{flexBasis:"48%", boxShadow: "0 15px 25px rgba(0, 0, 0, 0.3)", marginTop:"20px"}}>
          <img width={"100%"} src={items.title} alt="" key={items.id}/>
          </div>
        ))}
      </DIV>
 
-     <DIV2>
+     {/* <DIV2>
        <img src="" alt="no Image" />
-    </DIV2>
+    </DIV2> */}
     </>
   )
 }

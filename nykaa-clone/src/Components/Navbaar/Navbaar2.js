@@ -1,4 +1,5 @@
 import {AppBar, styled, Toolbar} from "@mui/material";
+import { Link, NavLink } from 'react-router-dom';
 
 
 
@@ -32,7 +33,7 @@ const Navbaar2 = () => {
             <p>Natural</p>
             <p>Mom & Baby</p>
             <p>Health & Wellness</p>
-            <p>Men</p>
+           <Link to='/product'> <p>Men</p></Link>
             <p>Fragrance</p>
             <p>LUXE</p>
             <p><img width={"70px"} src="https://www.kindpng.com/picc/m/112-1127467_logo-brand-font-product-transparent-sale-clip-art.png" alt="" /></p>

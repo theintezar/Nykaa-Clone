@@ -17,7 +17,7 @@ export const cartReducer = (state = Cart, action) => {
             ? {
                 ...c,
                 quantity: c.quantity + 1,
-                totalAmount: (c.quantity + 1) * c.price,
+                totalAmount: (c.quantity + 1) * c.mrp,
               }
             : c
         );
@@ -26,26 +26,27 @@ export const cartReducer = (state = Cart, action) => {
 
         const res = [
           ...state,
-          { ...product, quantity: 1, totalAmount: product.price },
+          { ...product, quantity: 1, totalAmount: product.mrp },
         ];
 
-        console.log(res);
+        // console.log(res);
         return res;
       }
+      
 
     case DELETE_ITEM:
       const present1 = state.find((c) => c.id === product.id);
       if (present1.quantity === 1) {
         return state.filter((c) => c.id !== present1.id);
       } else {
-        return state.map((item) =>
-          item.id === product.id
+        return state.map((c) =>
+          c.id === product.id
             ? {
-                ...item,
-                quantity: item.quantity - 1,
-                totalAmount: (item.quantity - 1) * item.price,
+                ...c,
+                quantity: c.quantity - 1,
+                totalAmount: (c.quantity - 1) * c.mrp,
               }
-            : item
+            : c
         );
       }
 

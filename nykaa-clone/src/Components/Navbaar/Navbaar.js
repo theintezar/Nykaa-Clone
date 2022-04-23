@@ -5,7 +5,9 @@ import PersonIcon from '@mui/icons-material/Person';
 import LocalMallIcon from '@mui/icons-material/LocalMall';
 import StyledBadge from "@mui/material/Badge";
 import { useSelector } from 'react-redux';
-import {useState} from "react"
+import {useState} from "react";
+import {Link} from "react-router-dom";
+
 
 
 
@@ -33,8 +35,8 @@ const Search = styled("div")(({theme})=>({
 }));
 
 const Navbaar = () => {
-  const data1 = useSelector((state)=> state.cart.data)
-  const [data, setData] = useState([data1])
+  const data1 = useSelector((state)=> state.cart)
+  
   //console.log(data1);
   
     return (
@@ -70,16 +72,17 @@ const Navbaar = () => {
           <Button sx={{color:"black", fontFamily:"san-serif"}} startIcon={<PersonIcon/>} variant="text">Account</Button>
 
             <IconButton aria-label="cart">
-              <StyledBadge badgeContent={data.length} color="neutral">
+             <Link to = "/product/cart"> <StyledBadge badgeContent={data1.length} color="neutral">
               <LocalMallIcon color='otherColor' />
               </StyledBadge>
+              </Link>
             </IconButton>
           </StyledToolbar>
           
         </StyledToolbar>
         
       </AppBar>
-      <AppBar sx={{marginTop:"65px"}} color="primary">
+      {/* <AppBar sx={{marginTop:"65px"}} color="primary">
         <StyledToolbar>
             <p>Makeup</p>
             <p>Skin</p>
@@ -89,13 +92,13 @@ const Navbaar = () => {
             <p>Natural</p>
             <p>Mom & Baby</p>
             <p>Health & Wellness</p>
-            <p>Men</p>
+            <Link to="/product"><Button>Men</Button></Link>
             <p>Fragrance</p>
             <p>LUXE</p>
             <p><img width={"70px"} src="https://www.kindpng.com/picc/m/112-1127467_logo-brand-font-product-transparent-sale-clip-art.png" alt="" /></p>
          
         </StyledToolbar>
-      </AppBar>
+      </AppBar> */}
     </>
    
             
