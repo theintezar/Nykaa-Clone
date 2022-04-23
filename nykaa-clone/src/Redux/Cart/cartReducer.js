@@ -13,13 +13,7 @@ export const cartReducer = (state = Cart, action) => {
       //if present update quentity and total amount
       if (present) {
         return state.map((c) =>
-          c.id === product.id
-            ? {
-                ...c,
-                quantity: c.quantity + 1,
-                totalAmount: (c.quantity + 1) * c.mrp,
-              }
-            : c
+          c.id === product.id ? { ...c, quantity: c.quantity + 1, totalAmount: (c.quantity + 1) * c.mrp, } : c
         );
       } else {
         const product = action.payload;
@@ -40,13 +34,7 @@ export const cartReducer = (state = Cart, action) => {
         return state.filter((c) => c.id !== present1.id);
       } else {
         return state.map((c) =>
-          c.id === product.id
-            ? {
-                ...c,
-                quantity: c.quantity - 1,
-                totalAmount: (c.quantity - 1) * c.mrp,
-              }
-            : c
+          c.id === product.id ? { ...c, quantity: c.quantity - 1, totalAmount: (c.quantity - 1) * c.mrp, } : c
         );
       }
 

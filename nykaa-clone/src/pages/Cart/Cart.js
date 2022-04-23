@@ -101,8 +101,8 @@ const Cart = () => {
         })}
       
         <DIV3>
-        <h1 style={{marginTop:"150px", textAlign:"center",fontFamily:"sarif"}}>Payment Details</h1>
-          <newP className="net">TOTAL: {amount}₹</newP>
+        <h1 style={{marginTop:"100px", textAlign:"center",fontFamily:"sarif"}}>Payment Details</h1>
+          <newP >TOTAL: {amount}₹</newP>
         {data1.length>0?<Button size="large" color="secondary" variant="contained">Check Out</Button>:<newP className="net">Cart is Empty</newP>}
         </DIV3>
 
