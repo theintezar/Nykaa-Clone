@@ -34,7 +34,7 @@ const DIV3 = styled("div")({
 function ProductDetails() {
     const { id } = useParams();
 
-    let url =  `http://localhost:3002/menData/${id}`;
+    let url =  `https://nykaalone.herokuapp.com/menData/${id}`;
     const dispatch = useDispatch()
        useEffect(() => {
            dispatch(getData(url))

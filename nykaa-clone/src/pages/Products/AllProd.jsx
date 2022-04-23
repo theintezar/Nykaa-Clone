@@ -56,7 +56,7 @@ function AllProd() {
     const [page, setPage] = useState(1);
     
 
-    let url =  `http://localhost:3002/menData?_page=${page}&_limit=9`;
+    let url =  `https://nykaalone.herokuapp.com/menData?_page=${page}&_limit=9`;
     const dispatch = useDispatch()
        useEffect(() => {
            dispatch(getData(url))
