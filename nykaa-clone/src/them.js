@@ -16,7 +16,11 @@ export const theme = createTheme({
     },
     otherColor:{
         main: "black",
-        
+    },
+    newColor:{
+        main: '#fc2779',
+        light: 'black',
     }
+
   },
 });

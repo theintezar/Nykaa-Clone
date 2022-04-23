@@ -3,7 +3,9 @@ import {AppBar, InputBase, styled, Toolbar, Typography, Button, IconButton } fro
 import SearchIcon from '@mui/icons-material/Search';
 import PersonIcon from '@mui/icons-material/Person';
 import LocalMallIcon from '@mui/icons-material/LocalMall';
-import StyledBadge from "@mui/material/Badge"
+import StyledBadge from "@mui/material/Badge";
+import { useSelector } from 'react-redux';
+import {useState} from "react"
 
 
 
@@ -31,6 +33,9 @@ const Search = styled("div")(({theme})=>({
 }));
 
 const Navbaar = () => {
+  const data1 = useSelector((state)=> state.cart.data)
+  const [data, setData] = useState([data1])
+  //console.log(data1);
   
     return (
     <>
@@ -65,7 +70,7 @@ const Navbaar = () => {
           <Button sx={{color:"black", fontFamily:"san-serif"}} startIcon={<PersonIcon/>} variant="text">Account</Button>
 
             <IconButton aria-label="cart">
-              <StyledBadge badgeContent={4} color="neutral">
+              <StyledBadge badgeContent={data.length} color="neutral">
               <LocalMallIcon color='otherColor' />
               </StyledBadge>
             </IconButton>

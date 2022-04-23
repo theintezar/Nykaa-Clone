@@ -2,6 +2,7 @@ import React from 'react'
 import styled from '@emotion/styled';
 import brandimg from './brandsImg';
 
+
 const DIV = styled("div")({
   display:"flex",
   justifyContent:"space-around",
@@ -41,7 +42,7 @@ function TopBrands() {
      </DIV>
 
      <DIV2>
-       <img src="https://drive.google.com/file/d/1sg4fMCHOk7QwmNDXQ0KmieC6iCrCnviE/view?usp=sharing" alt="" />
+       <img src="" alt="no Image" />
     </DIV2>
     </>
   )
