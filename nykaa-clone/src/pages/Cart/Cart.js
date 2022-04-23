@@ -44,6 +44,7 @@ const DIV1 = styled("div")({
     fontFamily:"inherit",
     fontSize:"15px",
     marginTop:"5px"
+
     })
 
 
@@ -74,7 +75,7 @@ const Cart = () => {
     <>
     <Navbaar/>
     <Navbaar2/>
-      <h1 style={{marginTop:"150px", textAlign:"center",fontFamily:"sarif"}}>CART</h1>
+      <h1 style={{marginTop:"150px", textAlign:"center",fontFamily:"sarif"}}>CART: {data1.length}</h1>
       <div>
         {data1.map((d) => {
           return (
@@ -100,8 +101,9 @@ const Cart = () => {
         })}
       
         <DIV3>
-          
+        <h1 style={{marginTop:"150px", textAlign:"center",fontFamily:"sarif"}}>Payment Details</h1>
           <newP className="net">TOTAL: {amount}₹</newP>
+        {data1.length>0?<Button size="large" color="secondary" variant="contained">Check Out</Button>:<newP className="net">Cart is Empty</newP>}
         </DIV3>
 
      
