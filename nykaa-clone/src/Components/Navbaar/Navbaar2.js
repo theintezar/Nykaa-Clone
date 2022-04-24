@@ -22,7 +22,7 @@ const StyledToolbar = styled(Toolbar)({
     boxSizing:"border-box",
     height:"30px",
     width:"100%",
-    "::-webkit-scrollbar" :{
+    "::-webkit-scrollbar":{
       display: "none"
   }
 
@@ -45,7 +45,9 @@ const Navbaar2 = () => {
           
       <AppBar sx={{marginTop:"65px",display:{xs:"none", sm:"block"}}} color="primary" >
         <StyledToolbar>
-        <p style={{padding:"10px"}}>Makeup</p>
+        
+            <NavLink to='/product'> <p style={{padding:"10px", color:"black"}}>Men</p></NavLink>
+            <p style={{padding:"10px"}}>Makeup</p>
             <p style={{padding:"10px"}}>Skin</p>
             <p style={{padding:"10px"}}>Hair</p>
             <p style={{padding:"10px"}}>Appliances</p>
@@ -53,8 +55,6 @@ const Navbaar2 = () => {
             <p style={{padding:"10px"}}>Natural</p>
             <p style={{padding:"10px"}}>Mom</p>
             <p style={{padding:"10px"}}>Wellness</p>
-            <NavLink style={({isActive})=>{
-              return {textDecoration: isActive? "underline" : ''}}} to='/product'> <p style={{padding:"10px", color:"black"}}>Men</p></NavLink>
             <p style={{padding:"10px"}}>Fragrance</p>
             <p style={{padding:"10px"}}>LUXE</p>
             <p style={{padding:"10px"}}><img width={"70px"} src="https://www.kindpng.com/picc/m/112-1127467_logo-brand-font-product-transparent-sale-clip-art.png" alt="" /></p>
@@ -64,6 +64,8 @@ const Navbaar2 = () => {
 
        <StyleAppbar sx={{marginTop:"65px",display:{xs:"block", sm:"none"}}} color="primary" >
         <StyledToolbar2 >
+           
+            <NavLink to='/product'> <p style={{padding:"10px", color:"black"}}>Men</p></NavLink>
             <p style={{padding:"10px"}}>Makeup</p>
             <p style={{padding:"10px"}}>Skin</p>
             <p style={{padding:"10px"}}>Hair</p>
@@ -72,14 +74,9 @@ const Navbaar2 = () => {
             <p style={{padding:"10px"}}>Natural</p>
             <p style={{padding:"10px"}}>Mom</p>
             <p style={{padding:"10px"}}>Wellness</p>
-            <NavLink style={({isActive})=>{
-              return {textDecoration: isActive? "underline" : ''}}} to='/product'> <p style={{padding:"10px", color:"black"}}>Men</p></NavLink>
             <p style={{padding:"10px"}}>Fragrance</p>
             <p style={{padding:"10px"}}>LUXE</p>
             <p style={{padding:"10px"}}><img width={"70px"} src="https://www.kindpng.com/picc/m/112-1127467_logo-brand-font-product-transparent-sale-clip-art.png" alt="" /></p>
-
-            
-         
         </StyledToolbar2>
        </StyleAppbar>
 

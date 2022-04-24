@@ -18,7 +18,8 @@ const StyledToolbar = styled(Toolbar)({
     display: "flex",
     justifyContent:"space-between",
     alignItems:"center",
-    boxSizing:"border-box"
+    boxSizing:"border-box",
+    
   });
 
 
@@ -41,26 +42,22 @@ const Navbaar = () => {
   
     return (
     <>
-      <AppBar sx={{zIndex:"999"}} color="primary" position="fixed">
+      <AppBar sx={{display:{xs:"none", sm:"block"}}} color="primary" position="fixed">
         <StyledToolbar>
-
-          <Typography variant="h6" sx={{display:{xs:"block", sm:"none"}}}>
-               <img width={"40px"} border-radius={"50%"} src="https://image.winudf.com/v2/image1/Y29tLmZzbi5uZHNfaWNvbl8xNjQwMzAwMTQ1XzA0OQ/icon.png?w=&fakeurl=1" alt="" />
-          </Typography>
 
           <StyledToolbar sx={{width:"50%"}}>
 
-          <Typography variant="h6" sx={{display:{xs:"none", sm:"block"}}}>
+          <Typography variant="div">
               <img width={"100px"} src="https://cdn.worldvectorlogo.com/logos/nykaa-1.svg" alt="" />
           </Typography>
 
           <Typography variant="span" sx={{display:{xs:"none", sm:"block"}}}>
           <StyledToolbar sx={{width:"120%", fontSize:"15px",}}>
-             <p><b> Categories</b></p>
-             <p><b> Brands</b></p>
-             <p><b>Nykaa Fashion</b> </p>
-             <p><b> Beauty Advice</b></p>
-             <p><b> Nykaa Network</b></p>
+             <p style={{padding:"3px", fontSize:"14px"}}><b> Categories</b></p>
+             <p style={{padding:"3px", fontSize:"14px"}}><b> Brands</b></p>
+             <p style={{padding:"3px", fontSize:"14px"}}><b>Nykaa Fashion</b> </p>
+             <p style={{padding:"3px", fontSize:"14px"}}><b> Beauty Advice</b></p>
+             <p style={{padding:"3px", fontSize:"14px"}}><b> Nykaa Network</b></p>
           </StyledToolbar>
           </Typography>
           </StyledToolbar>
@@ -68,8 +65,36 @@ const Navbaar = () => {
           <Search ><SearchIcon/><InputBase placeholder='Search...'/></Search>
              
 
-          <StyledToolbar sx={{width:"15%"}}>
+          <StyledToolbar sx={{width:"16%"}}>
           <Button sx={{color:"black", fontFamily:"san-serif"}} startIcon={<PersonIcon/>} variant="text">Account</Button>
+        
+            <IconButton aria-label="cart">
+             <Link to = "/product/cart"> <StyledBadge badgeContent={data1.length} color="neutral">
+              <LocalMallIcon color='otherColor' />
+              </StyledBadge>
+              </Link>
+            </IconButton>
+          </StyledToolbar>
+          
+        </StyledToolbar>
+        
+      </AppBar>
+
+
+
+      {/* Responsive navbaar */}
+
+      <AppBar sx={{display:{xs:"block", sm:"none"}, maxWidth:"100%"}} color="primary" position="fixed">
+        <StyledToolbar>
+
+          <Typography variant="div" >
+               <img width={"40px"}  src="https://image.winudf.com/v2/image1/Y29tLmZzbi5uZHNfaWNvbl8xNjQwMzAwMTQ1XzA0OQ/icon.png?w=&fakeurl=1" alt="" />
+          </Typography>
+
+
+          <StyledToolbar sx={{width:"55%"}}>
+          <SearchIcon/>
+          <Button sx={{color:"black", fontFamily:"san-serif"}} startIcon={<PersonIcon/>} variant="text">.</Button>
 
             <IconButton aria-label="cart">
              <Link to = "/product/cart"> <StyledBadge badgeContent={data1.length} color="neutral">
@@ -82,23 +107,7 @@ const Navbaar = () => {
         </StyledToolbar>
         
       </AppBar>
-      {/* <AppBar sx={{marginTop:"65px"}} color="primary">
-        <StyledToolbar>
-            <p>Makeup</p>
-            <p>Skin</p>
-            <p>Hair</p>
-            <p>Appliances</p>
-            <p>Personal Care</p>
-            <p>Natural</p>
-            <p>Mom & Baby</p>
-            <p>Health & Wellness</p>
-            <Link to="/product"><Button>Men</Button></Link>
-            <p>Fragrance</p>
-            <p>LUXE</p>
-            <p><img width={"70px"} src="https://www.kindpng.com/picc/m/112-1127467_logo-brand-font-product-transparent-sale-clip-art.png" alt="" /></p>
-         
-        </StyledToolbar>
-      </AppBar> */}
+    
     </>
    
             
