@@ -30,7 +30,6 @@
   
   }
   #prod{
-   
     width: 96%;
     object-fit: cover;
    }
@@ -92,4 +91,74 @@
   }
   .dot.active {
     background: rgb(244, 6, 82);
+  }
+
+  @media only screen and (max-width: 600px) {
+    .container-slider {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 20px auto 0;
+      position: relative;
+      overflow: hidden;
+    }
+    #prod1{
+      width: 100%;
+      padding: 10px;
+    }
+
+    #prod{
+      width: 95%;
+      object-fit: cover;
+     }
+     #prod img{
+     width: 100%;
+    }
+
+     .btn-slide {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: #f1f1f1;
+      border: 1px solid rgba(34, 34, 34, 0.287);
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
+    
+    .btn-slide img {
+      width: 10px;
+      height: 10px;
+      pointer-events: none;
+    }
+    .prev {
+      top: 10%;
+      left: 6px;
+      transform: translateY(-60%);
+    }
+    .next {
+      top: 10%;
+      right: 6px;
+      transform: translateY(-60%);
+    }
+     .container-dots {
+      position: absolute;
+      left: 50%;
+      top: 75px;
+      transform: translateX(-50%);
+      display: flex;
+      
+    }
+    .dot {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      border: 1px solid pink;
+      margin: 0 5px;
+      background: rgb(247, 129, 149);
+      
+    }
   }

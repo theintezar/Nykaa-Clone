@@ -13,6 +13,7 @@ import {
 } from "react-router-dom";
 import Login from "./pages/Authentication/Login";
 import ProductDetails from "./pages/ProductDetails/ProductDetails";
+import Scroller from "./Components/Slider/Scroller";
 // import Cart from "./pages/Cart/Cart";
 
 
@@ -34,6 +35,7 @@ function App() {
 
 
   </Router>
+  
     
     </div>
   );

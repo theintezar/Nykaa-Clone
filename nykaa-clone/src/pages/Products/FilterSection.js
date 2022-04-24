@@ -1,8 +1,9 @@
 import React from 'react'
+import { Box } from '@mui/material'
 
 function FilterSection() {
   return (
-    <div style={{border:"1px solid blue", width:"20%"}}>FilterSection</div>
+    <Box sx={{display:{xs:"none", sm:"block"}}}>FilterSection</Box>
   )
 }
 

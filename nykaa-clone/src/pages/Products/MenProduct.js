@@ -10,12 +10,11 @@ import Navbaar2 from '../../Components/Navbaar/Navbaar2';
 
 const DIV = styled("div")({
     display:"flex",
-    justifyContent:"space-around",
+    justifyContent:"space-between",
     alignItems:"center",
     backgroundColor: "#ffffff",
-    margin:"auto",
-    marginTop:"50px",
-  });
+    
+   });
 
 function MenProduct() {
   

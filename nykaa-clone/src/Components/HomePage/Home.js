@@ -5,6 +5,7 @@ import dataSlider from '../Slider/dataSlider'
 import { useState } from 'react';
 import Navbaar2 from '../Navbaar/Navbaar2';
 import Navbaar from '../Navbaar/Navbaar';
+import Scroller from '../Slider/Scroller';
 
 
 export default function Home() {
@@ -15,6 +16,7 @@ export default function Home() {
        <Navbaar2/>
         <Slider data={data} num={7}/>
         <MiddleContent/>
+        <Scroller/>
        
        
     </>
