@@ -139,34 +139,23 @@
       pointer-events: none;
     }
     .prev {
-      top: 40%;
+      top: 50%;
       left: 2px;
       transform: translateY(-60%);
       background-color: rgb(255, 255, 255,0.4);
     }
     .next {
-      top: 40%;
+      top: 50%;
       right: 2px;
       transform: translateY(-60%);
       background-color: rgb(255, 255, 255,0.4);
     }
 
-    #prev1 {
-      top: 40%;
-      left: 2px;
-      transform: translateY(-60%);
-      background-color: rgb(255, 255, 255,0.4);
-    }
-    #next1 {
-      top: 40%;
-      right: 2px;
-      transform: translateY(-60%);
-      background-color: rgb(255, 255, 255,0.4);
-    }
+ 
      .container-dots {
       position: absolute;
       left: 50%;
-      top: 75px;
+      top: 77px;
       transform: translateX(-50%);
       display: flex;
       

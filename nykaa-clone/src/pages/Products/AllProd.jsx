@@ -18,7 +18,7 @@ const DIV1= styled("div")({
   width:"70%",
   alignItems:"center",
   flexDirection:"column",
-  // padding:"20px"
+  marginTop:"20px"
 
   
 })
