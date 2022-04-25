@@ -13,6 +13,7 @@ const DIV = styled("div")({
     justifyContent:"space-between",
     alignItems:"center",
     backgroundColor: "#ffffff",
+    paddingleft:"60px"
     
    });
 

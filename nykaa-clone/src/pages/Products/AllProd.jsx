@@ -6,6 +6,10 @@ import { Pagination } from '@mui/material';
 import styled from '@emotion/styled';
 import {Link} from "react-router-dom";
 import { addToCart } from '../../Redux/Cart/action';
+import { border } from '@mui/system';
+import { Box } from '@mui/material';
+
+
 
 
 const DIV1= styled("div")({
@@ -15,6 +19,8 @@ const DIV1= styled("div")({
   alignItems:"center",
   flexDirection:"column",
   padding:"20px"
+
+  
 })
 
 const DIV2 = styled("div")({
@@ -24,7 +30,12 @@ const DIV2 = styled("div")({
   backgroundColor: "#ffffff",
   flexWrap:"wrap",
   margin:"auto",
-  gap:"20px"
+  gap:"10px",
+  paddingLeft:"20px",
+  
+  
+  
+  
 })
 
 const DIV3 = styled("div")({
@@ -32,8 +43,7 @@ const DIV3 = styled("div")({
   alignItems:"center",
   justifyContent:"center",
   flexDirection:"column",
-  // flexBasis:"31%",
-  width:"270px",
+  width:"260px",
   boxShadow: "0 10px 20px rgba(0, 0, 0, 0.2)",
   borderRadius:"5px",
   overflow:"hidden"
@@ -108,10 +118,13 @@ function AllProd() {
             
         ))}
       </DIV2>
-        <div style={{marginTop:"30px"}}>
-        <Pagination count={5} size="large" variant="outlined" color='newColor' page={page} onChange={handleChange} sx={{display:{xs:"none", sm:"block"}}}/>
-        <Pagination count={5} size="small" variant="outlined" color='newColor' page={page} onChange={handleChange} sx={{display:{xs:"block", sm:"none"}, marginLeft:"5px"}}/>
-        </div>
+        <Box sx={{marginTop:"30px", display:"flex", alignItems:"center", justifyContent:"center", display:{xs:"none", sm:"block"}} }>
+        <Pagination sx={{boxShadow: "0 10px 20px rgba(0, 0, 0, 0.2)",}} count={5} size="large" variant="outlined" color='newColor' page={page} onChange={handleChange} />
+        </Box>
+
+        <Box sx={{width:"100%", margin:"20px 0 0 70px", display:"flex", alignItems:"center", justifyContent:"center", display:{xs:"block", sm:"none"}}}>
+        <Pagination sx={{boxShadow: "0 10px 20px rgba(0, 0, 0, 0.2)",}} count={5} size="small" variant="outlined" color='newColor' page={page} onChange={handleChange} />
+        </Box>
         
       
     </DIV1>
