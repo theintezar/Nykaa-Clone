@@ -21,7 +21,6 @@ const DIV2 = styled(Box)({
   justifyContent:"center",
   alignItems:"center",
   backgroundColor: "#ffffff",
-  border:"2px solid red",
   marginLeft:"20px"
  
 });
