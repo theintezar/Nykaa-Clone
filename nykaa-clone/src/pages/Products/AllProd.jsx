@@ -117,7 +117,7 @@ function AllProd() {
         <Pagination sx={{boxShadow: "0 10px 20px rgba(0, 0, 0, 0.2)", padding:"20px"}} count={5} size="large" variant="outlined" color='newColor' page={page} onChange={handleChange} />
         </Box>
 
-        <Box sx={{width:"90%", margin:"20px 0 0", display:"flex", alignItems:"center", justifyContent:"center", display:{xs:"block", sm:"none"}}}>
+        <Box sx={{width:"93%", margin:"20px 0 0", display:"flex", alignItems:"center", justifyContent:"center", display:{xs:"block", sm:"none"}}}>
         <Pagination sx={{boxShadow: "0 10px 20px rgba(0, 0, 0, 0.2)", padding:"10px"}} count={5} size="small" variant="outlined" color='newColor' page={page} onChange={handleChange} />
         </Box>
         
