@@ -21,6 +21,8 @@ const DIV1 = styled("div")({
   const DIV2 = styled("div")({
       display:"flex",
       alignItems:"center",
+      flexWrap:"wrap",
+      gap:"4px",
       justifyContent:"space-between",
       width:"20%"
    
@@ -60,7 +62,7 @@ const Cart = () => {
     dispatch(delCart(product));
   };
 
-  const byOne = (product) => {
+  const incProd = (product) => {
     dispatch(addToCart(product));
   };
 
@@ -75,13 +77,13 @@ const Cart = () => {
     <>
     <Navbaar/>
     <Navbaar2/>
-      <h1 style={{marginTop:"150px", textAlign:"center",fontFamily:"sarif"}}>CART: {data1.length}</h1>
+      <h1 style={{marginTop:"135px", textAlign:"center",fontFamily:"sarif"}}>CART: {data1.length}</h1>
       <div>
         {data1.map((d) => {
           return (
             <DIV1>
               
-                <img width={"10%"} src={d.image} alt={d.desc} />
+                <img width={"20%"} src={d.image} alt={d.desc} />
               
               <div>
                 <Pstyle>{d.title}</Pstyle>
@@ -92,7 +94,7 @@ const Cart = () => {
 
               <DIV2>
                 <Button color="secondary" className="minus_btn" variant="contained" onClick={() => delProd(d)}> - </Button>
-                <Button color="secondary" variant="contained" onClick={() => byOne(d)}>+</Button>
+                <Button color="secondary" variant="contained" onClick={() => incProd(d)}>+</Button>
               </DIV2>
                 
               

@@ -3,7 +3,7 @@ import { Box } from '@mui/material'
 
 function FilterSection() {
   return (
-    <Box sx={{display:{xs:"none", sm:"block"}}}>FilterSection</Box>
+    <Box sx={{display:{xs:"none", sm:"block"}, width:"28%"}}>FilterSection</Box>
   )
 }
 
