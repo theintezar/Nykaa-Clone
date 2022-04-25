@@ -5,17 +5,26 @@ import styled from '@emotion/styled';
 import FilterSection from './FilterSection';
 import Navbaar from '../../Components/Navbaar/Navbaar';
 import Navbaar2 from '../../Components/Navbaar/Navbaar2';
+import { Box } from '@mui/system';
 
 
 
-const DIV = styled("div")({
+const DIV = styled(Box)({
     display:"flex",
     justifyContent:"space-between",
     alignItems:"center",
     backgroundColor: "#ffffff",
-    paddingleft:"60px"
-    
-   });
+});
+
+const DIV2 = styled(Box)({
+  display:"flex",
+  justifyContent:"center",
+  alignItems:"center",
+  backgroundColor: "#ffffff",
+  border:"2px solid red",
+  marginLeft:"20px"
+ 
+});
 
 function MenProduct() {
   
@@ -25,10 +34,19 @@ function MenProduct() {
     <Navbaar2/>
     <Slider data={dataSlider} num={2} />
 
+  <Box sx={{display:{xs:"none", sm:"block"}}}>
     <DIV>
       <FilterSection/>
       <AllProd/>
     </DIV>
+  </Box>
+
+  <Box sx={{display:{xs:"block", sm:"none"}}}>
+    <DIV2>
+      <FilterSection/>
+      <AllProd/>
+    </DIV2>
+  </Box>
      
 
 </div>

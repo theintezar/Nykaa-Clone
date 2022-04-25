@@ -6,7 +6,7 @@ import { Pagination } from '@mui/material';
 import styled from '@emotion/styled';
 import {Link} from "react-router-dom";
 import { addToCart } from '../../Redux/Cart/action';
-import { border } from '@mui/system';
+import { border, padding } from '@mui/system';
 import { Box } from '@mui/material';
 
 
@@ -14,28 +14,23 @@ import { Box } from '@mui/material';
 
 const DIV1= styled("div")({
   display:"flex",
-  justifyContent:"space-around",
+  justifyContent:"center",
   width:"70%",
   alignItems:"center",
   flexDirection:"column",
-  padding:"20px"
+  // padding:"20px"
 
   
 })
 
 const DIV2 = styled("div")({
   display:"flex",
-  justifyContent:"space-around",
+  justifyContent:"center",
   alignItems:"center",
   backgroundColor: "#ffffff",
   flexWrap:"wrap",
-  margin:"auto",
-  gap:"10px",
-  paddingLeft:"20px",
-  
-  
-  
-  
+  gap:"20px",
+ 
 })
 
 const DIV3 = styled("div")({
@@ -119,11 +114,11 @@ function AllProd() {
         ))}
       </DIV2>
         <Box sx={{marginTop:"30px", display:"flex", alignItems:"center", justifyContent:"center", display:{xs:"none", sm:"block"}} }>
-        <Pagination sx={{boxShadow: "0 10px 20px rgba(0, 0, 0, 0.2)",}} count={5} size="large" variant="outlined" color='newColor' page={page} onChange={handleChange} />
+        <Pagination sx={{boxShadow: "0 10px 20px rgba(0, 0, 0, 0.2)", padding:"20px"}} count={5} size="large" variant="outlined" color='newColor' page={page} onChange={handleChange} />
         </Box>
 
-        <Box sx={{width:"100%", margin:"20px 0 0 70px", display:"flex", alignItems:"center", justifyContent:"center", display:{xs:"block", sm:"none"}}}>
-        <Pagination sx={{boxShadow: "0 10px 20px rgba(0, 0, 0, 0.2)",}} count={5} size="small" variant="outlined" color='newColor' page={page} onChange={handleChange} />
+        <Box sx={{border:"2px solid red",width:"110%", margin:"20px 0 0 0px", display:"flex", alignItems:"center", justifyContent:"center", display:{xs:"block", sm:"none"}}}>
+        <Pagination sx={{boxShadow: "0 10px 20px rgba(0, 0, 0, 0.2)", padding:"10px"}} count={5} size="small" variant="outlined" color='newColor' page={page} onChange={handleChange} />
         </Box>
         
       
