@@ -66,17 +66,17 @@ const Navbaar2 = () => {
         <StyledToolbar2 >
            
             <NavLink to='/product'> <p style={{padding:"10px", color:"black"}}>Men</p></NavLink>
-            <p style={{padding:"10px"}}>Makeup</p>
-            <p style={{padding:"10px"}}>Skin</p>
-            <p style={{padding:"10px"}}>Hair</p>
-            <p style={{padding:"10px"}}>Appliances</p>
-            <p style={{padding:"10px"}}>Personal</p>
-            <p style={{padding:"10px"}}>Natural</p>
-            <p style={{padding:"10px"}}>Mom</p>
-            <p style={{padding:"10px"}}>Wellness</p>
-            <p style={{padding:"10px"}}>Fragrance</p>
-            <p style={{padding:"10px"}}>LUXE</p>
-            <p style={{padding:"10px"}}><img width={"70px"} src="https://www.kindpng.com/picc/m/112-1127467_logo-brand-font-product-transparent-sale-clip-art.png" alt="" /></p>
+            <p style={{padding:"12px"}}>Makeup</p>
+            <p style={{padding:"12px"}}>Skin</p>
+            <p style={{padding:"12px"}}>Hair</p>
+            <p style={{padding:"12px"}}>Appliances</p>
+            <p style={{padding:"12px"}}>Personal</p>
+            <p style={{padding:"12px"}}>Natural</p>
+            <p style={{padding:"12px"}}>Mom</p>
+            <p style={{padding:"12px"}}>Wellness</p>
+            <p style={{padding:"12px"}}>Fragrance</p>
+            <p style={{padding:"12px"}}>LUXE</p>
+            <p style={{padding:"12px"}}><img width={"70px"} src="https://www.kindpng.com/picc/m/112-1127467_logo-brand-font-product-transparent-sale-clip-art.png" alt="" /></p>
         </StyledToolbar2>
        </StyleAppbar>
 
@@ -86,4 +86,7 @@ const Navbaar2 = () => {
 }
 
  export default Navbaar2;
+
+
+
 

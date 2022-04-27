@@ -7,8 +7,9 @@ import styled from '@emotion/styled';
 import { addToCart } from '../../Redux/Cart/action';
 import Navbaar from "../../Components/Navbaar/Navbaar";
 import Navbaar2 from "../../Components/Navbaar/Navbaar2"
+import { Box } from '@mui/material';
 
-const DIV1 = styled("div")({
+const Box1 = styled(Box)({
   display:"flex",
   boxShadow: "0 5px 10px rgba(0, 0, 0, 0.2)",
   width:"85%",
@@ -17,10 +18,6 @@ const DIV1 = styled("div")({
  })
 
 const DIV3 = styled("div")({
-    // display:"flex",
-    // alignItems:"center",
-    // justifyContent:"center",
-    // flexDirection:"column",
     width:"39.5%",
     borderRight:"2px solid grey",
     padding:"30px",
@@ -39,6 +36,43 @@ const DIV3 = styled("div")({
     width:"65%",
     
   })
+
+  // Responsive
+
+
+  const Box2 = styled(Box)({
+    display:"flex",
+    flexDirection:"column",
+    justifyContent:"center",
+    alignItems:"center",
+    boxShadow: "0 5px 10px rgba(0, 0, 0, 0.2)",
+    width:"85%",
+    margin:"50px auto",
+    gap:"1px"
+   })
+
+   const DIV5 = styled("div")({
+    borderBottom:"2px solid grey",
+    padding:"30px",
+    boxShadow: "0 5px 10px rgba(0, 0, 0, 0.2)",
+    marginTop:"10px",
+   
+  })
+
+  const DIV6 = styled("div")({
+    display:"flex",
+    alignItems:"center",
+    justifyContent:"space-between",
+    width:"100%",
+    fontSize:"10px",
+    
+  })
+
+  const DIV7 = styled("div")({
+    marginTop:"30px",
+    width:"80.5%",
+
+})
 
 function ProductDetails() {
     const { id } = useParams();
@@ -60,12 +94,15 @@ function ProductDetails() {
     <>
     <Navbaar/>
     <Navbaar2/>
-   <DIV1>
+
+    <Box  sx={{display:{xs:"none", sm:"block"}}}>
+   <Box1>
        
         <DIV3 className='hoverStyle'>
            <p style={{color:"red",textAlign:"justify",padding:"20px", fontSize:"14px"}}> FEATURED : <span style={{color:"#85dda3"}}>{data.featured}</span></p>
            <img width={"90%"} src={data.image} alt="No" key={data.id}/>
         </DIV3>
+
         <DIV4>
             <p style={{ fontWeight:"500", fontFamily:"serif", fontSize:"30px"}}>{data.desc}</p>
             <p>(100ml)</p>
@@ -98,7 +135,51 @@ function ProductDetails() {
         </DIV4>  
            
        
-   </DIV1>
+   </Box1>
+   </Box>
+
+
+<Box sx={{display:{xs:"block", sm:"none"}}}>
+   <Box2>
+       
+       <DIV5 className='hoverStyle'>
+          <p style={{color:"red",textAlign:"justify",padding:"20px", fontSize:"14px"}}> FEATURED : <span style={{color:"#85dda3"}}>{data.featured}</span></p>
+          <img width={"90%"} src={data.image} alt="No" key={data.id}/>
+       </DIV5>
+       <DIV7>
+           <p style={{ fontWeight:"500", fontFamily:"serif", fontSize:"18px"}}>{data.desc}</p>
+           <p>(100ml)</p>
+            <br />
+         <DIV6>
+            <img width={"18%"} src="https://www.pngkit.com/png/detail/39-399026_4-1-2-stars-logo-4-stars.png" alt="" />
+            <p>4/5</p>
+            <p>{data.review} ratings & 84 reviews</p> 
+            <p>64 Q&As</p>
+         </DIV6>
+         <br />
+
+           <p style={{ fontWeight:"500", fontFamily:"serif",color:"grey"}}>
+           MRP: <strike style={{color:"grey"}}>₹3000</strike> 
+           <span style={{fontSize:"17px",color:"black"}}> ₹{data.mrp} </span>
+           <span style={{color:"#85dda3"}}>{data.off} Off</span> 
+           </p>
+          <br />
+          <p style={{width:"90%", backgroundColor:"#eceef0", padding:"10px", marginTop:"30px", fontSize:"8px"}}>Shop worth INR 1200 and above and get a free Nykaa Cosmetics Nail Paint. Terms & conditions apply. Offer valid until stock lasts.</p> 
+          
+          <br />
+
+          <div onClick={() => addCart(data)} style={{width:"40%", textAlign:"center", fontSize:"15px", fontWeight:"700", color:"white", backgroundColor:"#fc2779", padding:"10px", margin:"auto", marginTop:"30px"}}>ADD TO BAG</div>
+
+          <div style={{display:"flex", width:"120%",height:"30px", justifyContent:"space-between", alignItems:"center", backgroundColor:"#eceef0", margin:"50px 0px 0px -28.9px", fontSize:"8px", padding:"5px"}}>
+            <div>100% Genuine Products</div>
+            <div>Easy Return Policy</div>
+            <div>Sold by :NYKAA E RETAIL P...</div>
+          </div>
+       </DIV7>  
+          
+      
+  </Box2>
+</Box>
    </>
   )
 }
