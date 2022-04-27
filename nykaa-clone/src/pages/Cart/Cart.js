@@ -5,7 +5,7 @@ import { addToCart, delCart } from "../../Redux/Cart/action";
 import Navbaar from "../../Components/Navbaar/Navbaar"
 import Navbaar2 from "../../Components/Navbaar/Navbaar2"
 import styled from "@emotion/styled";
-
+import { Box } from "@mui/material";
 
 const DIV1 = styled("div")({
   display:"flex",
@@ -77,13 +77,17 @@ const Cart = () => {
     <>
     <Navbaar/>
     <Navbaar2/>
-      <h1 style={{marginTop:"135px", textAlign:"center",fontFamily:"sarif"}}>CART: {data1.length}</h1>
+    <Box sx={{display:{xs:"none", sm:"block"}}}><h1 style={{marginTop:"135px", textAlign:"center",fontFamily:"sarif"}}>CART: {data1.length}</h1></Box>
+      <Box sx={{display:{xs:"block", sm:"none"}}}><h1 style={{marginTop:"40px", textAlign:"center",fontFamily:"sarif"}}>CART: {data1.length}</h1></Box>
       <div>
         {data1.map((d) => {
           return (
             <DIV1>
+
+            <Box sx={{display:{xs:"none", sm:"block"}}}> <img width={"50%"} src={d.image} alt={d.desc} /></Box>
+            <Box sx={{display:{xs:"block", sm:"none"}}}> <img width={"70%"} src={d.image} alt={d.desc} /></Box>
               
-                <img width={"20%"} src={d.image} alt={d.desc} />
+               
               
               <div>
                 <Pstyle>{d.title}</Pstyle>
