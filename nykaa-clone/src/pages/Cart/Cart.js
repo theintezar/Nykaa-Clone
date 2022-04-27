@@ -85,7 +85,7 @@ const Cart = () => {
             <DIV1>
 
             <Box sx={{display:{xs:"none", sm:"block"}}}> <img width={"50%"} src={d.image} alt={d.desc} /></Box>
-            <Box sx={{display:{xs:"block", sm:"none"}}}> <img width={"70%"} src={d.image} alt={d.desc} /></Box>
+            <Box sx={{display:{xs:"block", sm:"none"}}}> <img width={"55%"} src={d.image} alt={d.desc} /></Box>
               
                
               
