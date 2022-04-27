@@ -3,6 +3,7 @@ import Data from "./Components/Data/Data";
 import Home from "./Components/HomePage/Home";
 import MenProduct from "./pages/Products/MenProduct";
 import Cart from "./pages/Cart/Cart";
+import { useAuth } from "./pages/Auth/firebase";
 
 import {
   BrowserRouter as Router,
@@ -11,6 +12,7 @@ import {
 } from "react-router-dom";
 import ProductDetails from "./pages/ProductDetails/ProductDetails";
 import Scroller from "./Components/Slider/Scroller";
+import Signin from "./pages/Auth/Signin";
 
 // import Cart from "./pages/Cart/Cart";
 
@@ -19,20 +21,21 @@ import Scroller from "./Components/Slider/Scroller";
 
 
 function App() {
+  let user = useAuth()
+
   return (
     <div>
   <Router>
-      <Routes>
-      
-      <Route path="/" element={ <Home/>}/>
+    <Routes>
+      <Route path="/" element={user?<Home/>:<Signin/>}/>
       <Route path="/product" element={ <MenProduct/>}/>
       <Route path="/product/:id" element={ <ProductDetails/>}/>
       <Route path="/product/cart" element={ <Cart/>}/>
-
-      </Routes>
-
-
+      <Route path="/register" element={<Signin/>}></Route>
+    </Routes>
   </Router>
+
+  
   
 
     
