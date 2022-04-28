@@ -5,6 +5,8 @@ import { Box, Button } from '@mui/material'
 import React from 'react';
 import { InputBase } from '@mui/material';
 import Bar from "./Bar";
+import Navbaar from "../../Components/Navbaar/Navbaar";
+import Navbaar2 from "../../Components/Navbaar/Navbaar2";
 
 const StyleBox = styled(Box)({
     width:"100vw",
@@ -14,11 +16,22 @@ const StyleBox = styled(Box)({
     justifyContent:"center",
     flexDirection:"column",
     gap:"40px",
-    backgroundImage:"url(https://wallpaperaccess.com/full/1900851.png)",
-    backgroundSize:"500%",
-    
+    backgroundImage:"url(https://www.teahub.io/photos/full/265-2650242_purple-flowers-white-background-white-background-with-purple.jpg)",
+    backgroundSize:"100%",
+    })
 
-})
+    const Box1 = styled(Box)({
+      width:"100vw",
+      height:"100vh",
+      display:"flex",
+      alignItems:"center",
+      justifyContent:"center",
+      flexDirection:"column",
+      gap:"40px",
+      backgroundImage:"url(https://www.teahub.io/photos/full/265-2650242_purple-flowers-white-background-white-background-with-purple.jpg)",
+      backgroundSize:"100%",
+      })
+
 const Search = styled("div")(({theme})=>({
     backgroundColor: "#bdbdbd",
     padding:"5px 10px",
@@ -28,6 +41,7 @@ const Search = styled("div")(({theme})=>({
   }));
 
 function Signin() {
+  
 
   const [ loading, setLoading ] = useState(false);
   const currentUser = useAuth();
@@ -57,6 +71,8 @@ function Signin() {
       }
   return (
     <>
+  { currentUser &&<><Navbaar/>
+    <Navbaar2/></> }
    { !currentUser?<StyleBox>
       <Bar/>
       <p style={{fontFamily:"sarif", fontSize:"25px", color:"whitesmoke"}}>---Register---</p>
@@ -65,8 +81,9 @@ function Signin() {
       <Search ><InputBase type="password" placeholder='Confirm Password'/></Search>
       <Button disabled={ loading || currentUser } onClick={handleSignup} variant="contained" sx={{backgroundColor:"#2196f3"}}>Sign Up</Button>
       
-      </StyleBox> : <h1>You are currently login: {currentUser.email}</h1> } 
-      <button disabled={ loading || !currentUser } onClick={handleLogout}>Log Out</button>
+      </StyleBox> : <Box1> <h1 style={{fontFamily:"cursive", magrinTop:"50%"}}>You are currently login: {currentUser.email}</h1>
+      <Button variant="contained" sx={{backgroundColor:"#2196f3"}} disabled={ loading || !currentUser } onClick={handleLogout}>Log Out</Button>
+      </Box1> } 
     </>
   )
 }

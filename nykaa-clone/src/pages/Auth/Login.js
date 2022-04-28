@@ -5,6 +5,7 @@ import { InputBase } from '@mui/material';
 import { useAuth, login } from './firebase';
 import { useRef, useState } from "react";
 import Bar from './Bar';
+import { Link } from 'react-router-dom';
 
 const StyleBox = styled(Box)({
     width:"100vw",
@@ -14,11 +15,9 @@ const StyleBox = styled(Box)({
     justifyContent:"center",
     flexDirection:"column",
     gap:"40px",
-    backgroundImage:"url(https://wallpaperaccess.com/full/1900851.png)",
-    backgroundSize:"500%",
-    
-
-})
+    backgroundImage:"url(https://www.teahub.io/photos/full/265-2650242_purple-flowers-white-background-white-background-with-purple.jpg)",
+    backgroundSize:"100%",
+    })
 const Search = styled("div")(({theme})=>({
     backgroundColor: "#bdbdbd",
     padding:"5px 10px",
@@ -31,6 +30,8 @@ function Login() {
     const [ loading, setLoading ] = useState(false);
     const [ email, setEmail ] = useState("");
     const [ password, setPassword ] = useState("");
+  
+    
     const currentUser = useAuth();
   
     async function handleLogin() {
@@ -42,14 +43,16 @@ function Login() {
         }
         setLoading(false);
       }
+     
   return (
     <>
     { !currentUser && <StyleBox>
       <Bar/>
       <p style={{fontFamily:"sarif", fontSize:"25px", color:"whitesmoke"}}>---Login---</p>
-      <Search ><InputBase onChange={(event)=>{setEmail(event.target.value)}}  placeholder='Email' type='email'/></Search>
-      <Search ><InputBase onChange={(event)=>{setPassword(event.target.value)}}  placeholder='Password' type='password'/></Search>
+      <Search ><InputBase sx={{width:"100%"}} onChange={(event)=>{setEmail(event.target.value)}}  placeholder='Email' type='email'/></Search>
+      <Search ><InputBase sx={{width:"100%"}} onChange={(event)=>{setPassword(event.target.value)}}  placeholder='Password' type='password'/></Search>
       <Button disabled={ loading || currentUser } onClick={handleLogin}  variant="contained" sx={{backgroundColor:"#2196f3"}}>Login</Button>
+      <Link to = "/">Go to home page</Link>
       </StyleBox>}  
     </>
   )

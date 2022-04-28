@@ -15,6 +15,7 @@ import ProductDetails from "./pages/ProductDetails/ProductDetails";
 import Scroller from "./Components/Slider/Scroller";
 import Signin from "./pages/Auth/Signin";
 import Login from "./pages/Auth/Login";
+import Payment from "./pages/PaymentPage/Payment";
 
 // import Cart from "./pages/Cart/Cart";
 
@@ -29,13 +30,13 @@ function App() {
     <div>
   <Router>
     <Routes>
-      <Route path="/" element={user?<Home/>:<Signin/>}/>
+      <Route path="/" element={<Home/>}></Route>
       <Route path="/product" element={ <MenProduct/>}/>
       <Route path="/product/:id" element={ <ProductDetails/>}/>
       <Route path="/product/cart" element={ <Cart/>}/>
       <Route path="/register" element={<Signin/>}></Route>
-      {/* <Route path="/login" element={<Login/>}></Route> */}
       <Route path="/login" element={user?<Navigate to="/" /> : <Login />}></Route>
+      <Route path="/payment" element={!user?<Navigate to="/register"/>:<Payment/>}/>
       
     </Routes>
   </Router>

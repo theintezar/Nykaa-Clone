@@ -6,6 +6,7 @@ import Navbaar from "../../Components/Navbaar/Navbaar"
 import Navbaar2 from "../../Components/Navbaar/Navbaar2"
 import styled from "@emotion/styled";
 import { Box } from "@mui/material";
+import { Link } from "react-router-dom";
 
 const DIV1 = styled("div")({
   display:"flex",
@@ -109,7 +110,7 @@ const Cart = () => {
         <DIV3>
         <h1 style={{marginTop:"100px", textAlign:"center",fontFamily:"sarif"}}>Payment Details</h1>
           <newP >TOTAL: {amount}₹</newP>
-        {data1.length>0?<Button size="large" color="secondary" variant="contained">Check Out</Button>:<newP className="net">Cart is Empty</newP>}
+        {data1.length>0?<Link style={{textDecoration:"none"}} to="/payment"><Button size="large" color="secondary" variant="contained">Check Out</Button></Link>:<newP className="net">Cart is Empty</newP>}
         </DIV3>
 
      

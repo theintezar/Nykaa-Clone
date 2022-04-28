@@ -7,11 +7,8 @@ import StyledBadge from "@mui/material/Badge";
 import { useSelector } from 'react-redux';
 import {useState} from "react";
 import {Link,NavLink} from "react-router-dom";
-
-
-
-
-
+import VerifiedIcon from '@mui/icons-material/Verified';
+import { useAuth } from '../../pages/Auth/firebase';
 
 
 const StyledToolbar = styled(Toolbar)({
@@ -37,6 +34,7 @@ const Search = styled("div")(({theme})=>({
 
 const Navbaar = () => {
   const data1 = useSelector((state)=> state.cart)
+  const user = useAuth();
   
   //console.log(data1);
   
@@ -66,7 +64,7 @@ const Navbaar = () => {
              
 
           <StyledToolbar sx={{width:"16%"}}>
-          <NavLink style={{textDecoration:"none"}} to="/register"><Button sx={{color:"black", fontFamily:"san-serif"}} startIcon={<PersonIcon/>} variant="text">Account</Button></NavLink>
+          <NavLink style={{textDecoration:"none"}} to="/register"><Button sx={{color:"black", fontFamily:"san-serif"}} startIcon={user?<VerifiedIcon/>:<PersonIcon/>} variant="text">Account</Button></NavLink>
         
             <IconButton aria-label="cart">
              <Link to = "/product/cart"> <StyledBadge badgeContent={data1.length} color="neutral">
