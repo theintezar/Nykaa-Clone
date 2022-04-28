@@ -6,7 +6,7 @@ import LocalMallIcon from '@mui/icons-material/LocalMall';
 import StyledBadge from "@mui/material/Badge";
 import { useSelector } from 'react-redux';
 import {useState} from "react";
-import {Link} from "react-router-dom";
+import {Link,NavLink} from "react-router-dom";
 
 
 
@@ -48,7 +48,7 @@ const Navbaar = () => {
           <StyledToolbar sx={{width:"50%"}}>
 
           <Typography variant="div">
-              <img width={"100px"} src="https://cdn.worldvectorlogo.com/logos/nykaa-1.svg" alt="" />
+              <NavLink to="/" style={{textDecoration:"none"}}><img width={"100px"} src="https://cdn.worldvectorlogo.com/logos/nykaa-1.svg" alt="" /></NavLink>
           </Typography>
 
           <Typography variant="span" sx={{display:{xs:"none", sm:"block"}}}>
@@ -66,7 +66,7 @@ const Navbaar = () => {
              
 
           <StyledToolbar sx={{width:"16%"}}>
-          <Button sx={{color:"black", fontFamily:"san-serif"}} startIcon={<PersonIcon/>} variant="text">Account</Button>
+          <NavLink style={{textDecoration:"none"}} to="/register"><Button sx={{color:"black", fontFamily:"san-serif"}} startIcon={<PersonIcon/>} variant="text">Account</Button></NavLink>
         
             <IconButton aria-label="cart">
              <Link to = "/product/cart"> <StyledBadge badgeContent={data1.length} color="neutral">

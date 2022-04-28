@@ -49,10 +49,10 @@ const DIV4 = styled("div")({
   alignItems:"center",
   justifyContent:"space-between",
   width:"100%",
-  "&:hover":{
-    backgroundColor: "#fc2779",
-  }
- 
+  // "&:hover":{
+  //   backgroundColor: "#fc2779",
+  // }
+  backgroundColor: "#fc2779",
 })
 
 const P = styled("p")({
