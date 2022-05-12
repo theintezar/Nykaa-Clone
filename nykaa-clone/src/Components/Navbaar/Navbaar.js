@@ -86,13 +86,14 @@ const Navbaar = () => {
         <StyledToolbar>
 
           <Typography variant="div" >
-               <img width={"40px"}  src="https://image.winudf.com/v2/image1/Y29tLmZzbi5uZHNfaWNvbl8xNjQwMzAwMTQ1XzA0OQ/icon.png?w=&fakeurl=1" alt="" />
+             <NavLink to="/" style={{textDecoration:"none"}}><img width={"40px"}  src="https://image.winudf.com/v2/image1/Y29tLmZzbi5uZHNfaWNvbl8xNjQwMzAwMTQ1XzA0OQ/icon.png?w=&fakeurl=1" alt="" /></NavLink>
           </Typography>
 
 
           <StyledToolbar sx={{width:"55%"}}>
           <SearchIcon/>
-          <Button sx={{color:"black", fontFamily:"san-serif"}} startIcon={<PersonIcon/>} variant="text">.</Button>
+          {/* <Button sx={{color:"black", fontFamily:"san-serif"}} startIcon={<PersonIcon/>} variant="text">.</Button> */}
+          <NavLink style={{textDecoration:"none"}} to="/register"><Button sx={{color:"black", fontFamily:"san-serif"}} startIcon={user?<VerifiedIcon/>:<PersonIcon/>} variant="text"></Button></NavLink>
 
             <IconButton aria-label="cart">
              <Link to = "/product/cart"> <StyledBadge badgeContent={data1.length} color="neutral">
