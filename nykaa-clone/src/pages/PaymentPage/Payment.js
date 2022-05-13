@@ -12,7 +12,7 @@ const StyleBox = styled(Box)({
     justifyContent:"center",
     flexDirection:"column",
     gap:"40px",
-    backgroundImage:"url(https://www.teahub.io/photos/full/265-2650242_purple-flowers-white-background-white-background-with-purple.jpg)",
+    backgroundColor:"blue",
     backgroundSize:"100%",
     })
 
@@ -20,7 +20,7 @@ function Payment() {
     const data1 = useSelector((state) => state.cart);
   return (<>
       { data1.map ((d)=>(
-        <StyleBox>{d.totalAmount}₹ is successful </StyleBox>
+        <StyleBox>{d.amount}₹ is successful </StyleBox>
       ))}
       </>
   )

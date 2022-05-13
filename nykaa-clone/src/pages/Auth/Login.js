@@ -15,7 +15,7 @@ const StyleBox = styled(Box)({
     justifyContent:"center",
     flexDirection:"column",
     gap:"40px",
-    backgroundImage:"url(https://www.teahub.io/photos/full/265-2650242_purple-flowers-white-background-white-background-with-purple.jpg)",
+    backgroundColor:"blue",
     backgroundSize:"100%",
     })
 const Search = styled("div")(({theme})=>({
