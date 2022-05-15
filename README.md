@@ -10,10 +10,4 @@
 ![Screenshot (566)](https://user-images.githubusercontent.com/31982418/168466481-02c705b7-4b47-41bb-99ba-aeecc0a05faf.png)
 ![Screenshot (567)](https://user-images.githubusercontent.com/31982418/168466482-c9c28bc4-bbcb-4af5-bf63-76251eaa13be.png)
 ![Screenshot (568)](https://user-images.githubusercontent.com/31982418/168466487-a6f598c3-0f15-48b2-9e42-21a785eaf1c2.png)
-![WhatsApp Image 2022-05-15 at 2 52 30 PM (5)](https://user-images.githubusercontent.com/31982418/168466494-a6ea6e74-95b8-4a7d-b4be-9703df92266b.jpeg)
-![WhatsApp Image 2022-05-15 at 2 52 30 PM (4)](https://user-images.githubusercontent.com/31982418/168466497-d1f7d44d-058a-4e3a-bc97-f071f5891fee.jpeg)
-![WhatsApp Image 2022-05-15 at 2 52 30 PM (3)](https://user-images.githubusercontent.com/31982418/168466506-599212be-73db-4e68-ae6d-dcf81501ddc7.jpeg)
-![WhatsApp Image 2022-05-15 at 2 52 30 PM (2)](https://user-images.githubusercontent.com/31982418/168466509-1b62913f-c10c-43a9-8c81-ce9cb347985d.jpeg)
-![WhatsApp Image 2022-05-15 at 2 52 30 PM (1)](https://user-images.githubusercontent.com/31982418/168466510-a396f230-a646-4aec-af96-6d37c4c90aef.jpeg)
-![Uploading ![23](https://user-images.githubusercontent.com/31982418/168466516-019263cc-f05e-4938-8d87-7cb01899f422.jpeg)
-WhatsApp Image 2022-05-15 at 2.52.30 PM.jpeg…]()
+
