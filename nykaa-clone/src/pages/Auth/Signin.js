@@ -16,8 +16,7 @@ const StyleBox = styled(Box)({
     justifyContent:"center",
     flexDirection:"column",
     gap:"40px",
-    backgroundImage:"url(https://www.teahub.io/photos/full/265-2650242_purple-flowers-white-background-white-background-with-purple.jpg)",
-    backgroundSize:"100%",
+    backgroundColor:"#FF0066",
     })
 
     const Box1 = styled(Box)({
@@ -28,8 +27,8 @@ const StyleBox = styled(Box)({
       justifyContent:"center",
       flexDirection:"column",
       gap:"40px",
-      backgroundImage:"url(https://www.teahub.io/photos/full/265-2650242_purple-flowers-white-background-white-background-with-purple.jpg)",
-      backgroundSize:"100%",
+      backgroundColor:"#FF0066",
+      
       })
 
 const Search = styled("div")(({theme})=>({

@@ -15,7 +15,7 @@ const StyleBox = styled(Box)({
     justifyContent:"center",
     flexDirection:"column",
     gap:"40px",
-    backgroundColor:"blue",
+    backgroundColor:"#FF0066",
     backgroundSize:"100%",
     })
 const Search = styled("div")(({theme})=>({
